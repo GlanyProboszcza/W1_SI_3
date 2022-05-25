@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS // with this i can use scanf, instead scanf_s
 #include<stdio.h>  
 
 
@@ -6,10 +6,15 @@ int main()
 {
     printf("Hello teacher! I'm you assistant.\n");
 
+    //variables used by programm
     int i, n;
     float m, sum = 0, a, avg;
+
+    // user input to decide how many subject will count
     printf("\nHow many Subject runs in your Institute? >> ");
     scanf("%d",&n);
+
+    //user input the marks, and will ask untill he get all pledge before
     printf("\nEnter marks obtained in %d Subjects [percentage values]: \n>> \n", n);
 
     for (i = 0; i < n; i++)
@@ -18,6 +23,7 @@ int main()
         sum = sum + m;
 
     }
+    //assigning grade to give % value
     a = sum / n;
     printf("\nGrade = ");
     if (a >= 90.1 && a <= 100)
@@ -35,6 +41,7 @@ int main()
     else
         printf("Invalid!");
 
+    //calculate the average note from all students results
     avg = sum / n;
     printf("\nAverage = ");
     if (avg <= 100)
@@ -42,7 +49,6 @@ int main()
 
     else
         printf("Invalid!");
-
     getch();
 
 
